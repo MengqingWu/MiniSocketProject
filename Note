@@ -1,0 +1,11 @@
+** 2017 Nov 20 mengqing Wu
+
+If binding failed: address already in use, how to diagnostic?
+
+try:
+$netstat -a | grep <portno>
+
+if you have output, means this portal is in use, then try:
+$netstat -tulpn 
+
+this will give you the process id and the programe which is using this particular port.
